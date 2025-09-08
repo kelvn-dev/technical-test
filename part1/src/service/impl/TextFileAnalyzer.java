@@ -33,7 +33,6 @@ public class TextFileAnalyzer implements FileAnalyzer<TextFile> {
             wordToCount.put(lowerCaseWord, currentCount + 1);
         }
 
-        file.setContent(fileContent);
         file.setWordCount(totalWordCount);
         file.setDistinctWordCount(totalDistinctWordCount);
         file.setWordToCount(wordToCount);

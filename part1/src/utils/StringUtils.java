@@ -1,8 +1,14 @@
 package utils;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class StringUtils {
+    private static final List<Character> punctuations = Arrays.asList(
+            '.', ',', '!', '?', ';', ':'
+    );
+
     public static boolean isEmpty(String str) {
         return Objects.isNull(str) || str.trim().isEmpty();
     }
@@ -20,12 +26,7 @@ public class StringUtils {
     }
 
     public static boolean endsWithPunctuation(String word) {
-        return word.endsWith(".") ||
-                word.endsWith(",") ||
-                word.endsWith("!") ||
-                word.endsWith("?") ||
-                word.endsWith(";") ||
-                word.endsWith(":");
+        return punctuations.contains(word.charAt(0));
     }
 
     public static String removePunctuation(String word) {

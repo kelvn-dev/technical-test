@@ -12,7 +12,7 @@ import java.io.IOException;
 public class TextFileParser extends BaseFileParser implements FileParser<TextFile> {
 
     @Override
-    public TextFile parse(String url) {
+    public TextFile parse(String url) throws IOException {
         File file = new File(url);
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -23,8 +23,7 @@ public class TextFileParser extends BaseFileParser implements FileParser<TextFil
                 stringBuilder.append(System.lineSeparator());
             }
         } catch (IOException e) {
-            System.err.println("Error reading file: " + e.getMessage());
-            // Throw exception
+            throw new IOException("Error parsing file: " + e.getMessage());
         }
 
         String fileContent = stringBuilder.toString().trim();

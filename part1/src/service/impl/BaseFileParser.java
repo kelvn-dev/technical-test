@@ -2,6 +2,7 @@ package service.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystemNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,9 +16,7 @@ public abstract class BaseFileParser {
         if (file.exists() && file.isFile()) {
             return file.length();
         } else {
-            // TODO: Throw exception
-            System.out.println("File does not exist or is not a regular file.");
-            return 0;
+            throw new FileSystemNotFoundException("File does not exist or is not a regular file");
         }
     }
 
@@ -29,13 +28,10 @@ public abstract class BaseFileParser {
             if (Objects.nonNull(contentType)) {
                 return contentType;
             } else {
-                // TODO: Throw exception
-                System.out.println("Could not determine content type.");
+                throw new IllegalArgumentException("Could not determine content type.");
             }
         } catch (IOException e) {
-            // TODO: Throw exception
-            System.err.println("Error probing content type: " + e.getMessage());
+            throw new IllegalArgumentException("Error probing content type: " + e.getMessage());
         }
-        return "";
     }
 }
