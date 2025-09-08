@@ -1,13 +1,11 @@
-package part1.service.impl;
+package service.impl;
 
-import part1.model.BaseFile;
-import part1.model.TextFile;
-import part1.service.FileAnalyzer;
+import model.TextFile;
+import service.FileAnalyzer;
 import utils.RegexUtils;
 import utils.StringUtils;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class TextFileAnalyzer implements FileAnalyzer<TextFile> {
 

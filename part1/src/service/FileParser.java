@@ -1,6 +1,6 @@
-package part1.service;
+package service;
 
-import part1.model.BaseFile;
+import model.BaseFile;
 
 public interface FileParser<T extends BaseFile> {
     T parse(String url);

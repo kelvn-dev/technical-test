@@ -1,4 +1,4 @@
-package part1.model;
+package model;
 
 import java.util.Comparator;
 import java.util.LinkedHashMap;

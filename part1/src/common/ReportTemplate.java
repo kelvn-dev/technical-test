@@ -1,4 +1,4 @@
-package part1.common;
+package common;
 
 public class ReportTemplate {
     public static final String TEXT_FILE_REPORT_TEMPLATE =

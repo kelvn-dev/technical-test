@@ -1,7 +1,8 @@
-package part1.service.impl;
+package service.impl;
 
-import part1.model.TextFile;
-import part1.service.FileParser;
+
+import model.TextFile;
+import service.FileParser;
 
 import java.io.BufferedReader;
 import java.io.File;

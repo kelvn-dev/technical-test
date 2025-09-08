@@ -1,5 +1,3 @@
-package part2;
-
 public class MysteryFunction {
     public static void main(String[] args) {
         int[] data = {12, 4, 6, 9, 2};

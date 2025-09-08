@@ -1,6 +1,6 @@
-package part1.service;
+package service;
 
-import part1.model.BaseFile;
+import model.BaseFile;
 
 public interface FileAnalyzer<T extends BaseFile> {
     T analyze(T file);

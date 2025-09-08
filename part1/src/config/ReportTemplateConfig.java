@@ -1,7 +1,8 @@
-package part1.config;
+package config;
 
-import part1.common.ReportTemplate;
-import part1.enums.ReportTemplateEnum;
+
+import common.ReportTemplate;
+import enums.ReportTemplateEnum;
 
 import java.util.Map;
 

@@ -1,13 +1,12 @@
-package part1.service.impl;
+package service.impl;
 
-import part1.config.ReportTemplateConfig;
-import part1.enums.ReportTemplateEnum;
-import part1.model.TextFile;
-import part1.service.ReportGenerator;
+import config.ReportTemplateConfig;
+import enums.ReportTemplateEnum;
+import model.TextFile;
+import service.ReportGenerator;
 import utils.StringUtils;
 
 import java.util.Map;
-import java.util.Objects;
 
 public class TextFileReportGenerator implements ReportGenerator<TextFile> {
 

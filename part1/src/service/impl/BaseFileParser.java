@@ -1,4 +1,4 @@
-package part1.service.impl;
+package service.impl;
 
 import java.io.File;
 import java.io.IOException;

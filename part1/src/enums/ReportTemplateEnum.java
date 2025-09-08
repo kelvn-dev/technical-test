@@ -1,4 +1,4 @@
-package part1.enums;
+package enums;
 
 public enum ReportTemplateEnum {
     TEXT_FILE,
