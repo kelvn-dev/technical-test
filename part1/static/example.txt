@@ -1,0 +1,2 @@
+Hello world. This is a simple text file for testing.
+This file contains words. Some words are repeated, like words, file, and this.
