@@ -6,9 +6,9 @@ start : expression;
 
 expression
    : NUMBER                                                 # Number
-   | MINUS right=expression                                 # Negation
    | LEFT_PARENTHESIS inner=expression RIGHT_PARENTHESIS    # Parentheses
    | left=expression operator=CARET right=expression        # Power
+   | MINUS right=expression                                 # Negation
    | left=expression operator=(STAR|SLASH) right=expression # MultiplicationOrDivision
    | left=expression operator=(PLUS|MINUS) right=expression # AdditionOrSubtraction
    ;

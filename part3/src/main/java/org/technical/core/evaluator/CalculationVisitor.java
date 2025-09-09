@@ -5,13 +5,7 @@ import org.technical.CalculatorBaseVisitor;
 import org.technical.CalculatorParser;
 
 public class CalculationVisitor extends CalculatorBaseVisitor<Double> {
-    /**
-     * Numbers are non-terminal.
-     * Although less precise, a double makes it
-     * easier to deal with division in this toy application.
-     *
-     * @return Double
-     */
+
     @Override
     public Double visitNumber(CalculatorParser.NumberContext ctx) {
         return Double.parseDouble(ctx.NUMBER().getText());
@@ -23,12 +17,7 @@ public class CalculationVisitor extends CalculatorBaseVisitor<Double> {
     }
 
     /**
-     * Parentheses are used to give precedence to
-     * the expression around which they are wrapped.
-     *
-     * This precedence is caused elsewhere,
-     * in the grammar, via the order in which
-     * the rules are defined (ANTLR4).
+     * Parentheses are used to give precedence to the expression around which they are wrapped.
      *
      * @return Double
      */
@@ -37,9 +26,6 @@ public class CalculationVisitor extends CalculatorBaseVisitor<Double> {
         return this.visit(ctx.inner);
     }
 
-    /**
-     * @return Double
-     */
     @Override
     public Double visitPower(CalculatorParser.PowerContext ctx) {
         return Math.pow(this.visit(ctx.left), this.visit(ctx.right));

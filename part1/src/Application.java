@@ -26,9 +26,6 @@ public class Application {
 
 
             ReportGenerator<TextFile> textFileReportGenerator = new TextFileReportGenerator();
-            for (Map.Entry<String, Integer> entry: textFile.getWordToCount().entrySet()) {
-                System.out.println(entry.getKey() + " " + entry.getValue());
-            }
             System.out.println(textFileReportGenerator.generate(textFile));
         } catch (Exception e) {
             System.err.println(e.getMessage());
