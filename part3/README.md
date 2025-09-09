@@ -29,7 +29,7 @@ Create a simple calculator script emulator in Java
 
 ## Prerequisites
 
-- [JDK](https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html) 
+- [JDK](https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html) (version 11)
 
 - [Apache Maven](https://maven.apache.org/download.cgi)
 

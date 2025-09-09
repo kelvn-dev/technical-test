@@ -19,7 +19,7 @@ Develop a Java application that reads a text file, parses its contents, and prov
 
 ## Prerequisites
 
-- [JDK](https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html)
+- [JDK](https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html) (version 11)
 
 ## Usage
 
