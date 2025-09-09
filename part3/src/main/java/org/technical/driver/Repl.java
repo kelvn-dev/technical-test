@@ -1,6 +1,13 @@
 package org.technical.driver;
 
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.technical.CalculatorLexer;
+import org.technical.CalculatorParser;
 import org.technical.core.calculator.Calculator;
+import org.technical.core.evaluator.CalculationVisitor;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -8,8 +15,7 @@ import java.io.Writer;
 import java.util.Scanner;
 
 /**
- * A REPL (read-evaluate-print-loop) is a continuously
- * running program which:
+ * A REPL (read-evaluate-print-loop) is a continuously running program which:
  *
  * 1. reads input
  * 2. evaluates the input
@@ -28,19 +34,20 @@ public class Repl {
 
     public void start() throws IOException {
         while (true) {
-            // Read
-            this.write("Calculate: ");
+            this.write("Calculate:\n");
             String line = this.scanner.nextLine();
 
-            // Evaluate
             if (line.equalsIgnoreCase("exit") || line.isEmpty()) {
-                this.writeLine("\tGoodbye");
+                this.writeLine("Goodbye");
                 break;
             }
-            Double result = this.calculator.calculate(line);
 
-            // Print
-            this.writeLine("\t" + result.toString());
+            try {
+                Double result = this.calculator.calculate(line);
+                this.writeLine(result.toString());
+            } catch (IllegalArgumentException e) {
+                System.err.println(e.getMessage());
+            }
         }
     }
 

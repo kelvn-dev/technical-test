@@ -15,7 +15,6 @@ public class VisitorMain {
                 new VisitorBasedCalculator(),
                 new PrintWriter(System.out)
         );
-
         repl.start();
     }
 }

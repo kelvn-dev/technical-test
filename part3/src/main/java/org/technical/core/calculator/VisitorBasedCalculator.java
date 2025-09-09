@@ -20,6 +20,10 @@ public class VisitorBasedCalculator implements Calculator {
         CalculatorParser parser = new CalculatorParser(tokens);
         ParseTree tree = parser.start();
 
+        if (parser.getNumberOfSyntaxErrors() > 0) {
+            throw new IllegalArgumentException("Invalid input");
+        }
+
         CalculationVisitor calculator = new CalculationVisitor();
         return calculator.visit(tree);
     }
