@@ -9,6 +9,12 @@ import java.util.*;
 
 public class TextFileAnalyzer implements FileAnalyzer<TextFile> {
 
+    /**
+     * Count total words, distinct words and per-word frequencies
+     *
+     * @param file
+     * @return TextFile
+     */
     @Override
     public TextFile analyze(TextFile file) {
         int totalWordCount = 0;

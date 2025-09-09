@@ -9,4 +9,6 @@ public class ReportTemplate {
 
     public static final String TOP_K_FREQUENT_WORDS_TEXT_FILE_REPORT_TEMPLATE =
             "${word} - ${wordCount} (${percentage}%)";
+
+    private ReportTemplate() {}
 }

@@ -9,6 +9,8 @@ public class StringUtils {
             '.', ',', '!', '?', ';', ':'
     );
 
+    private StringUtils() {}
+
     public static boolean isEmpty(String str) {
         return Objects.isNull(str) || str.trim().isEmpty();
     }

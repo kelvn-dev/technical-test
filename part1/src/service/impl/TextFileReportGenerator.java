@@ -12,6 +12,12 @@ public class TextFileReportGenerator implements ReportGenerator<TextFile> {
 
     private static final int NUMBER_OF_TOP_K = 5;
 
+    /**
+     * Generates a report from a TextFile using a preconfigured template
+     *
+     * @param textFile
+     * @return String
+     */
     @Override
     public String generate(TextFile textFile) {
         String textFileReportTemplate = ReportTemplateConfig.FILE_REPORT_TEMPLATE.get(ReportTemplateEnum.TEXT_FILE.toString());

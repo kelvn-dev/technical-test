@@ -11,6 +11,13 @@ import java.io.IOException;
 
 public class TextFileParser extends BaseFileParser implements FileParser<TextFile> {
 
+    /**
+     * Parses a file path into a TextFile model
+     *
+     * @param url
+     * @return TextFile
+     * @throws IOException
+     */
     @Override
     public TextFile parse(String url) throws IOException {
         File file = new File(url);

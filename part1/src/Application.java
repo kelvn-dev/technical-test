@@ -1,4 +1,3 @@
-import model.BaseFile;
 import model.TextFile;
 import service.FileAnalyzer;
 import service.FileParser;
@@ -7,7 +6,6 @@ import service.impl.TextFileAnalyzer;
 import service.impl.TextFileParser;
 import service.impl.TextFileReportGenerator;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class Application {

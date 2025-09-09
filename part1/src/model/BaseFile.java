@@ -9,11 +9,11 @@ public abstract class BaseFile implements Serializable {
     private String contentType;
     private long contentLength;
 
-    public BaseFile() {
+    protected BaseFile() {
         this.id = UUID.randomUUID();
     }
 
-    public BaseFile(UUID id, String contentType, long contentLength) {
+    protected BaseFile(UUID id, String contentType, long contentLength) {
         this.id = id;
         this.contentType = contentType;
         this.contentLength = contentLength;
