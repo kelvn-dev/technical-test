@@ -1,0 +1,8 @@
+# Ignore all files in the root directory
+*
+
+# Include these directories and files
+!src/main
+!pom.xml
+!.mvn
+!mvnw

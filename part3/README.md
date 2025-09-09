@@ -56,3 +56,26 @@ Create a simple calculator script emulator in Java
 - Run Calculator.java and input calculation (Ex: 2 + 3). You can refer to unit test for more cases located at `src/test/java/org/technical`.
 
 - Leave the calculation blank or type `exit` to exit the program.
+
+## Bonus: Building and running application using Docker
+
+- Build docker image
+  ```shell
+  cd part3
+  docker build -t calculator -f Dockerfile .
+  ```
+  or
+  ```shell
+  cd part3
+  sh bin/build_docker.sh
+  ```
+  
+- Run container
+  ```shell
+  docker run --rm -it calculator
+  ```
+  or
+  ```shell
+  cd part3
+  sh bin/run_docker_container.sh
+  ```
