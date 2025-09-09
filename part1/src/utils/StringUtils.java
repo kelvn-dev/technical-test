@@ -26,7 +26,7 @@ public class StringUtils {
     }
 
     public static boolean endsWithPunctuation(String word) {
-        return punctuations.contains(word.charAt(0));
+        return punctuations.contains(word.stripTrailing().charAt(word.length() - 1));
     }
 
     public static String removePunctuation(String word) {

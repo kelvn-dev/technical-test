@@ -30,19 +30,21 @@ Develop a Java application that reads a text file, parses its contents, and prov
 ## Highlights
 
 The system involves 3 main interfaces defined with type parameter extend from BaseFile
-=> **These generic interfaces support extension in the future if we want to add parser, analyzer and report generator for other file types than text, for example image or pdf**
+- FileParser\<T extends BaseFile>
+- FileAnalyzer\<T extends BaseFile>
+- ReportGenerator\<T extends BaseFile>
+
+**These generic interfaces support extension in the future if we want to add parser, analyzer and report generator for other file types than text, for example image or pdf**
 
 The system involves 3 main services:
 - TextFileParser: take a file path as input and read the contents of file into model TextFile 
 - TextFileAnalyzer: Count the number of times each word appears, all words and all distinct words
 - TextFileReportGenerator: take a TextFile model as input and generate report using pre-configure template
 
-
 Applied OOP principles:
 - encapsulation: private fields with public getters/setters
-- inheritance: model BaseFile contain common fields like id, contentType, ... for other models like TextFile or ImageFile to extend, which reuse code and create hierarchical structure
-- abstraction: make class BaseFile abstract to avoid instantiating
-- polymorphism: not yet
+- inheritance/abstraction: model BaseFile contain common fields like id, contentType, ... for other models like TextFile or ImageFile to extend, which reuse code and create hierarchical structure
+- polymorphism: present via the interfaces
 
 ## What can be improved ?
 - Apply design pattern Singleton => When switching to Springboot, we will auto have this through DI mechanism

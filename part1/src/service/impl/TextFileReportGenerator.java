@@ -18,7 +18,7 @@ public class TextFileReportGenerator implements ReportGenerator<TextFile> {
         String topKFrequentWordsTemplate = ReportTemplateConfig.FILE_REPORT_TEMPLATE.get(ReportTemplateEnum.TOP_K_FREQUENT_WORDS_TEXT_FILE.toString());
 
         if (StringUtils.isEmpty(textFileReportTemplate) || StringUtils.isEmpty(topKFrequentWordsTemplate)) {
-            // TODO: throw exception
+            throw new IllegalStateException("Pre-configure report template is missing");
         }
 
         Map<String, Integer> topKFrequentWords = textFile.getTopKFrequentWords(NUMBER_OF_TOP_K);
