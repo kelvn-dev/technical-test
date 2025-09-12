@@ -62,7 +62,7 @@ Create a simple calculator script emulator in Java
 - Build docker image
   ```shell
   cd part3
-  docker build -t calculator -f Dockerfile .
+  docker build --platform=linux/amd64 -t calculator -f Dockerfile .
   ```
   or
   ```shell
